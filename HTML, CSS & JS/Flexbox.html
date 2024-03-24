@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Practice</title>
+    <style>
+        body{
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .ananto{
+            background-color: #008DDA;
+            color: white;
+            padding-bottom: 15%;
+            text-align: center;
+        }
+        .sultan{
+            background-color: #2C7865;
+            color: white;
+            padding-bottom: 15%;
+            text-align: center;
+        }
+        .ddj{
+            background-color: #FB6D48;
+            color: white;
+            padding-bottom: 40%;
+            text-align: center;
+        }
+        .durjoy{
+            background-color: #00224D;
+            color: white;
+            padding-bottom: 15%;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .sub-container1{
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+        }
+        .sub-container2{
+            display: flex;
+            flex-basis: 100%;
+        }
+        .ananto, .sultan, .ddj, .durjoy{
+            flex-grow: 1;
+        }
+
+        @media (min-width: 668px){
+            .sub-container1{
+                flex-direction: row;
+                flex-wrap: wrap;
+                flex-basis: 60%;
+            }
+            .sub-container2{
+                flex-basis: 40%;
+            }
+            .ananto, .sultan{
+                flex-basis: 50%;
+                padding-top: 2%;
+                padding-bottom: 48%;
+            }
+            .durjoy{
+                padding-top: 2%;
+                padding-bottom: 48%;
+            }
+            .ddj{
+                padding-top: 2%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="sub-container1">
+          <div class="ananto">ANANTO</div>
+          <div class="sultan">SULTAN</div>
+          <div class="durjoy">DURJOY</div>
+        </div>
+        <div class="sub-container2">
+            <div class="ddj">DDJ</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
