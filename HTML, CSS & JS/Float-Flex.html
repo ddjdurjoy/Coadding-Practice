@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clickable Div</title>
+    <title>Float & Flex</title>
     <style>
         h2{
             font-weight: bold;
@@ -42,6 +42,7 @@
         .flexbox{
             display: flex;
             flex-flow: row wrap;
+            justify-content: space-between;
         }
 
         .flexbox main{
@@ -49,11 +50,7 @@
             padding: 4px;
         }
 
-        .flexbox section:first-of-type{
-            flex-basis: 50%;
-        }
-
-        .flexbox section:last-of-type{
+        .flexbox section{
             flex-basis: 50%;
         }
     </style>
