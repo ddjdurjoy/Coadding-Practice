@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Navbar</title>
+    <style>
+        body{
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .container{
+            background-color: #222831;
+            display: grid;
+            grid-template-areas: 
+            "a b c d 0 0 0 e";
+            padding: 3px;
+            grid-gap: 2px;
+        }
+        .home{
+            grid-area: a;
+        }
+        .services{
+            grid-area: b;
+        }
+        .blog{
+            grid-area: c;
+        }
+        .contact{
+            grid-area: d;
+        }
+        .career{
+            grid-area: e;
+        }
+        .container #btn a{
+            text-decoration: none;
+            color: black;
+        }
+        #btn{
+            text-align: center;
+            font-weight: bold;
+            background-color: #00ADB5;
+            padding: 5px;
+            font-size: 18px;
+        }
+        .container #btn:hover{
+            background-color: #3FC1C9;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .container #btn:active{
+            background-color: #EEEEEE;
+        }
+
+        @media (max-width: 600px){
+            .container{
+                grid-template-areas: 
+                "a" "b" "c" "d" "e";
+            }
+            #btn{
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="home" id="btn"><a href="#">Home</a></div>
+        <div class="services" id="btn"><a href="#">Services</a></div>
+        <div class="blog" id="btn"><a href="#">Blog</a></div>
+        <div class="contact" id="btn"><a href="#">Contact</a></div>
+        <div class="career" id="btn"><a href="#">Career</a></div>
+    </div>
+</body>
+</html>
