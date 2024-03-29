@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Forms (Fully Responsive)</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            background-color: #222831;
+            font-family: Tiro Bangla;
+        }
+        h2{
+            text-align: center;
+            color: #EEEEEE;
+            background-color: #76ABAE;
+            border-radius: 10px;
+        }
+        .container{
+            font-size: 18px;
+            padding: 0 10px;
+        }
+        input[type=text], [type=email], [type=number], [type=url], select{
+            width: 75%;
+            padding: 10px 20px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #EEEEEE;
+        }
+        label{
+            margin-top: 6px;
+            float: left;
+            width: 25%;
+            font-weight: bold;
+            color: #EEEEEE;
+        }
+        textarea{
+            width: 75%;
+            height: 100px;
+            resize: none;
+            border: 1px solid #ccc;
+            padding: 5px 20px;
+            border-radius: 5px;
+            margin-top: 6px;
+            background-color: #EEEEEE;
+        }
+        input[type=submit]{
+            float: right;
+            padding: 8px 15px;
+            font-weight: bold;
+            border: none;
+            background-color: #76ABAE;;
+            color: #ffffff;;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .row{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        option{
+            background-color: #EEEEEE;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap');
+
+        @media screen and (max-width: 600px) {
+            label{
+                width: 100%;
+            }
+            input[type=text], [type=email], [type=number], [type=url], [type=submit], select, textarea{
+                width: 100%;
+            }
+        }
+        input[type=submit]:hover{
+            opacity: 0.8;
+        }
+        input[type=submit]:active{
+            background-color: #EEEEEE;
+            color: #222831;
+        }
+    </style>
+</head>
+<body>
+    <h2>যোগাযোগ করুন, আজকেই!</h2>
+    <dev class="container">
+        <form>
+        <div class="row">
+        <label for="fname">নামের প্রথম অংশঃ</label>
+        <input type="text" id="fname" placeholder="Ex. শাহরুক" required>
+        </div>
+        <div class="row">
+        <label for="lname">নামের শেষ অংশঃ</label>
+        <input type="text" id="lname" placeholder="Ex. খাঁন" required>
+        </div>
+        <div class="row">
+        <label for="email">ইমেইল</label>
+        <input type="email" id="email" placeholder="Ex. abc@compsny.com" required>
+        </div>
+        <div class="row">
+        <label for="phone">ফোনঃ</label>
+        <input type="number" id="phone" placeholder="+880-17111-11111" required>
+        </div>
+        <div class="row">
+        <label for="address">ঠিকানাঃ</label>
+        <input type="text" id="address" placeholder="Ex. ১২৩, বাড়ী, রোড" required>
+        </div>
+        <div class="row">
+        <label for="city">উপজেলাঃ</label>
+        <input type="text" id="city" placeholder="Ex. বিক্রমপুর">
+        </div>
+        <div class="row">
+        <label for="state">জেলাঃ</label>
+        <select id="state" required>
+            <option value="none">একটা নির্বাচন করুন</option>
+            <option value="aa">ঢাকা</option>
+            <option value="bb">চট্টগ্রাম</option>
+            <option value="cc">মৌলভীবাজার</option>
+            <option value="dd">সিলেট</option>
+        </select>
+        </div>
+        <div class="row">
+        <label for="zip-code">পোস্ট কোডঃ</label>
+        <input type="number" id="zip-code" placeholder="Ex. 3200">
+        </div>
+        <div class="row">
+        <label for="url">ওয়েবসাইটঃ</label>
+        <input type="url" id="url" placeholder="Ex. https://www.xyz.com" required>
+        </div>
+        <div class="row">
+        <label>আপনার কি কোন মনের ব্যথা আছে?</label>
+        <select id="state" required>
+            <option value="none">একটা নির্বাচন করুন</option>
+            <option value="yes">হ্যা আছে</option>
+            <option value="no">নাই রে ভাই</option>
+        </select>
+        </div>
+        <div class="row">
+        <label for="description">আপনার সুখ-দুঃখের কথা বলুনঃ</label>
+        <textarea id="description" placeholder="এখানে লিখুন..." required></textarea>
+        </div>
+        <div class="row">
+        <input type="submit" value="সাবমিট">
+        </form>
+        </div>
+    </div>
+</body>
+</html>
