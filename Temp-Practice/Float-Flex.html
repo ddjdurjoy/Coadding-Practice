@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Div</title>
+    <style>
+        h2{
+            font-weight: bold;
+        }
+        main{
+            background-color: skyblue;
+        }
+        section:first-of-type{
+            background-color: yellowgreen;
+        }
+        section:last-of-type{
+            background-color: black;
+            color: white;
+        }
+
+        .float{
+            overflow: auto;
+        }
+
+        .float main{
+            padding: 4px;
+        }
+
+        .float section:first-of-type{
+            float: left;
+            width: 50%;
+            padding: 4px 0;
+        }
+
+        .float section:last-of-type{
+            float: right;
+            width: 50%;
+            padding: 4px 0;
+        }
+
+        .flexbox{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        .flexbox main{
+            flex: 1 1 100%;
+            padding: 4px;
+        }
+
+        .flexbox section{
+            flex-basis: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Using Float</h2>
+        <div class="float">
+        <main>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt perspiciatis sed exercitationem. Autem facere exercitationem vel consequuntur, quidem dicta, tenetur, illum similique consequatur velit maxime fugit ipsa dolor quo voluptatem!</main>
+        <section>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum delectus eveniet consequuntur veritatis incidunt fugit ab, ducimus recusandae earum omnis iusto qui magni mollitia ipsum provident placeat. Laboriosam, aliquid natus?</section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quasi sunt minima veniam quis! Temporibus eligendi, doloremque quod minima quisquam aliquid saepe, asperiores sunt labore autem soluta exercitationem, iure est.</section>
+        </div>
+
+        <h2>Using Flexbox</h2>
+        <div class="flexbox">
+            <main>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt perspiciatis sed exercitationem. Autem facere exercitationem vel consequuntur, quidem dicta, tenetur, illum similique consequatur velit maxime fugit ipsa dolor quo voluptatem!</main>
+            <section>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum delectus eveniet consequuntur veritatis incidunt fugit ab, ducimus recusandae earum omnis iusto qui magni mollitia ipsum provident placeat. Laboriosam, aliquid natus?</section>
+            <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quasi sunt minima veniam quis! Temporibus eligendi, doloremque quod minima quisquam aliquid saepe, asperiores sunt labore autem soluta exercitationem, iure est.</section>
+            </div>
+    </div>
+</body>
+</html>
